@@ -25,12 +25,14 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/github-script@v6
         env:
-          EVER: "ever\nhola"
+          EVER: "^v.$"
         with:
           script: |
             const fs = require('fs')
             console.log(process.env.EVER)
             fs.writeFileSync('ever.txt',process.env.EVER)
+            ever  = new RegExp(process.env.EVER)
+            console.log(ever.test('v.')
 
       # Runs a single command using the runners shell
       - name: Run a one-line script

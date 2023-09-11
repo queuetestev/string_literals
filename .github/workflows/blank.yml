@@ -31,8 +31,8 @@ jobs:
             const fs = require('fs')
             console.log(process.env.EVER)
             fs.writeFileSync('ever.txt',process.env.EVER)
-            ever  = new RegExp(process.env.EVER)
-            console.log(ever.test('v.')
+            ever= new RegExp(process.env.EVER)
+            console.log(ever.test('v.'))
 
       # Runs a single command using the runners shell
       - name: Run a one-line script

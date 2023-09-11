@@ -28,6 +28,7 @@ jobs:
           EVER: "ever\e"
         with:
           script: |
+            const fs = require('fs')
             console.log(process.env.EVER)
             fs.writeFileSync('ever.txt',process.env.EVER)
 

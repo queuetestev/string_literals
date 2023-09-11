@@ -32,6 +32,7 @@ jobs:
             console.log(process.env.EVER)
             fs.writeFileSync('ever.txt',process.env.EVER)
             ever= new RegExp(process.env.EVER)
+            console.log(ever)
             console.log(ever.test('v.'))
 
       # Runs a single command using the runners shell

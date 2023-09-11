@@ -29,7 +29,7 @@ jobs:
         with:
           script:
             console.log(process.env.EVER)
-            fs.writeFileSync('ever.txt',process.env.ENV)
+            fs.writeFileSync('ever.txt',process.env.EVER)
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
